@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        body{
+            font-family: 'EB Garamond', serif;
+            font-family: 'Inter', sans-serif;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-family: 'EB Garamond', serif;
+            font-family: 'Inter', sans-serif;
+        }
+        span, p, input{
+            font-family: 'EB Garamond', serif;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="flex justify-between bg-sky-100 items-center m-4 md:m-8 rounded-lg p-3 md:p-5">
+        <div>
+            <h1 class="text-3xl font-bold">Interactive</h1>
+            <h3 class="text-1xl">Geometry Genius</h3>
+        </div>
+        <div>
+            <button class="btn btn-primary" onclick="window.location.href ='blog.html';">Blog</button>
+        </div>
+    </header>
+    <main class="m-4 md:m-8">
+        <section class="md:flex">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:mr-4">
+                <div id="card1" class="border-2 border-gray-200 rounded-lg p-9 text-center">
+                    <img class="mb-10 mx-auto" src="images/triangle.png" alt="">
+                    <h1 id="card-name" class="text-2xl font-semibold ">Triangle</h1>
+                    <h2 class="my-3">Area (A) = 0.5 X b X h</h2>
+                    <input class="bg-gray-200 p-1 rounded-md w-16" type="text" name="" id="first-field" placeholder="b"><span class="mx-2">cm</span>
+                    <input class="bg-gray-200 p-1 rounded-md w-16" type="text" name="" id="second-field" placeholder="h"><span class="mx-2">cm</span>
+                    <button id="calculate-btn" class="btn btn-primary w-full mt-10">Calculate</button>
+                </div>
+                <div id="card2" class="border-2 border-gray-200 rounded-lg p-9 text-center">
+                    <img class="mb-10 mx-auto" src="images/rectangle.png" alt="">
+                    <h1 id="second-card-name" class="text-2xl font-semibold ">Rectangle</h1>
+                    <h2 class="my-3">Area (A) = w X I</h2>
+                    <input class="bg-gray-200 p-1 rounded-md w-16" type="text" name="" id="rect-first-field" placeholder="w"><span class="mx-2">cm</span>
+                    <input class="bg-gray-200 p-1 rounded-md w-16" type="text" name="" id="rect-second-field" placeholder="I"><span class="mx-2">cm</span>
+                    <button id="calculate-btn-two" class="btn btn-primary w-full mt-10">Calculate</button>
+                </div>
+                <div id="card3" class="border-2 border-gray-200 rounded-lg p-9 text-center">
+                    <img class="mb-10 mx-auto" src="images/parallelogram.png" alt="">
+                    <h1 id="third-card-name" class="text-2xl font-semibold ">Parallelogram</h1>
+                    <h2 class="my-3">Area (A) = b X h</h2>
+                    <h2 class="my-3">b = 10cm, h = 12cm</h2>
+                    <input class="bg-gray-200 p-1 rounded-md w-16" type="text" name="" id="para-first-field" placeholder="b"><span class="mx-2">cm</span>
+                    <input class="bg-gray-200 p-1 rounded-md w-16" type="text" name="" id="para-second-field" placeholder="h"><span class="mx-2">cm</span>
+                    <button id="calculate-btn-three" class="btn btn-primary w-full mt-10">Calculate</button>
+                </div>
+                <div id="card4" class="border-2 border-gray-200 rounded-lg p-9 text-center">
+                    <img class="mb-10 mx-auto" src="images/rhombus.png" alt="">
+                    <h1 id="four-card-name" class="text-2xl font-semibold ">Rhombus</h1>
+                    <h2 class="my-3">Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></h2>
+                    <h2 class="my-3">d<sub>1</sub> = 16cm d<sub>2</sub> = 8cm</h2>
+                    <input class="bg-gray-200 p-1 rounded-md w-16" type="text" name="" id="rhom-first-field" placeholder="d"><span class="mx-2">cm</span>
+                    <input class="bg-gray-200 p-1 rounded-md w-16" type="text" name="" id="rhom-second-field" placeholder="d"><span class="mx-2">cm</span>
+                    <button id="calculate-btn-four" class="btn btn-primary w-full mt-10">Calculate</button>
+                </div>
+                <div id="card5" class="border-2 border-gray-200 rounded-lg p-9 text-center">
+                    <img class="mb-10 mx-auto" src="images/pentagon.png" alt="">
+                    <h1 id="five-card-name" class="text-2xl font-semibold ">Pentagon</h1>
+                    <h2 class="my-3">Area (A) = 0.5 X p X b</h2>
+                    <h2 class="my-3">p = 6cm, b = 10cm</h2>
+                    <input class="bg-gray-200 p-1 rounded-md w-16" type="text" name="" id="pen-first-field" placeholder="p"><span class="mx-2">cm</span>
+                    <input class="bg-gray-200 p-1 rounded-md w-16" type="text" name="" id="pen-second-field" placeholder="b"><span class="mx-2">cm</span>
+                    <button id="calculate-btn-five" class="btn btn-primary w-full mt-10">Calculate</button>
+                </div>
+                <div id="card6" class="border-2 border-gray-200 rounded-lg p-9 text-center">
+                    <img class="mb-10 mx-auto" src="images/ellipse.png" alt="">
+                    <h1 id="six-card-name" class="text-2xl font-semibold ">Ellipse</h1>
+                    <h2 class="my-3">Area (A) = <img class="w-4 inline-block" src="images/pi.png" alt=""> ab</h2>
+                    <h2 class="my-3">a = 10cm, b = 8cm</h2>
+                    <input class="bg-gray-200 p-1 rounded-md w-16" type="text" name="" id="elli-first-field" placeholder="b"><span class="mx-2">cm</span>
+                    <input class="bg-gray-200 p-1 rounded-md w-16" type="text" name="" id="elli-second-field" placeholder="h"><span class="mx-2">cm</span>
+                    <button id="calculate-btn-six" class="btn btn-primary w-full mt-10">Calculate</button>
+                </div>
+            </div>
+            <div class="mt-4 md:mt-0 w-full md:w-2/6">
+                <div class="border-2 border-gray-200 rounded-lg p-5">
+                    <h1 class="text-2xl font-semibold text-center">Area Calculation</h1>
+                    <div class="divider w-full"></div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                          <tbody id="table-container">
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="js/tailwind.config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
